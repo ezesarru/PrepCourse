@@ -3,7 +3,7 @@ var numeroEntero = 17
 var numeroNegativo = -4
 var numeroDecimal = 11.75
 
-
+// Cris tkm
 
 // Transformar un número en string
 function transformacion(num) {
