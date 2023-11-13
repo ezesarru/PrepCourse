@@ -100,19 +100,18 @@ function sortArray(arrayOfStrings) {
 }
 
 function buscoInterseccion(array1, array2) {
-   // Recibes dos arreglos de números.
-   // Debes retornar un nuevo arreglo en el que se guarden los elementos en común entre ambos arreglos.
    // [EJEMPLO]: [4,2,3] U [1,3,4] = [3,4].
-   // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
-   // Tu código:
-   var elementosEnComun = []
-   for (var elemento of array1) {
-      if (array2.includes(elemento)) {
-         elementosEnComun.push(elemento)
+   // Retornar un NUEVO arreglo, en el que estén los elementos en común, si no tienen elementos en común un array vacío
+   var array = [];
+   for(var i = 0; i < array1.length; i++){
+      for(var x = 0; x < array2.length; x++){
+         if(array1[i] === array2[x]){
+            array.push(array1[i]);
+         }
       }
    }
-   return elementosEnComun.filter((elemento, indice) => elementosEnComun.indexOf(elemento) === indice)
+   return array;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
